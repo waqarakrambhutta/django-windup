@@ -16,7 +16,7 @@ from .serializers import AddCartItemSerializer, CartItemSerializer, CartSerializ
 
 
 class ProductViewSet(ModelViewSet):
-    queryset = Product.objects.all()
+    queryset = Product.objects.prefetch_related('images').all()
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = ProductFilter
@@ -147,7 +147,6 @@ class ProductImageViewset(ModelViewSet):
 
     def get_serializer_context(self):
         return {'product_id':self.kwargs['product_pk']}
-        # here's the error...my mistake.
     
     def get_queryset(self):
         return ProductImage.objects.filter(product_id=self.kwargs['product_pk'])
