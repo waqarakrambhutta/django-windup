@@ -47,7 +47,7 @@ class ProductImage(models.Model):
     product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name='images')
     image = models.ImageField(
         upload_to='store/images',
-        validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
+        validators=[FileExtensionValidator(allowed_extensions=['png'])])
     # we can also use the filefield which will first detect the file and then upload.
 
 
