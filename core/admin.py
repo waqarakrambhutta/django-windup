@@ -26,3 +26,4 @@ class CustomProductAdmin(ProductAdmin):
 
 admin.site.unregister(Product)
 admin.site.register(Product, CustomProductAdmin)
+
