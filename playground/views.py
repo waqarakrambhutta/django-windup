@@ -4,7 +4,8 @@ from django.shortcuts import render
 
 def say_hello(request):
     try:
-        send_mail('subject','message','waqar@domain.com',['ammar@domain.com'])
+        mail_admins('subject','message',html_message='messages')
+        #mail admin require configuration in the settings.
     except BadHeaderError:
-        pass
+        pass # we can also show the error message.
     return render(request, 'hello.html', {'name': 'Mosh'})

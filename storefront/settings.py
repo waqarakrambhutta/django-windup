@@ -185,3 +185,7 @@ EMAIL_HOST_PASSWORD = '' # similarly password is also empty.
 EMAIL_PORT = 2525 # by default it used 25, due to fake SMTP we use 2525
 DEFAULT_FROM_EMAIL = 'waqar@domian.com'
 # we use the password in the envionment variable due to security problem. which we'll learn in production.
+
+ADMINS = [
+    ('waqar','waqar@domain.com')
+]
