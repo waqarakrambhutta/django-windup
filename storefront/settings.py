@@ -189,3 +189,5 @@ DEFAULT_FROM_EMAIL = 'waqar@domian.com'
 ADMINS = [
     ('waqar','waqar@domain.com')
 ]
+
+CELERY_BROKER_URL = 'redis://localhost:6379/1'
