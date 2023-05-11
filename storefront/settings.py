@@ -201,5 +201,3 @@ CELERY_BEAT_SCHEDULE = {
         # 'kwargs': {} # if notify function is taking any kwargs.
     }
 }
-
-
