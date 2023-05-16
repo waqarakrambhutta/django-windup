@@ -1,5 +1,8 @@
 from rest_framework import status
+from store.models import Collection
+from model_bakery import baker
 import pytest
+
 
 @pytest.fixture
 def create_collection(api_client):
@@ -41,3 +44,34 @@ class TestCreateCollection:
 
         assert response.status_code == status.HTTP_201_CREATED
         assert response.data['id'] > 0
+
+@pytest.mark.django_db
+class TestRetrieveCollection:
+    def test_if_collection_exists_return_200(self, api_client):
+        #Arrange.
+        collection = baker.make(Collection)
+        #Act.
+        response = api_client.get(f'/store/collections/{collection.id}/')
+        #Assert.
+        assert response.status_code == status.HTTP_200_OK
+        assert response.data['id']== collection.id
+        assert response.data['title'] == collection.title
+
+
+        '''
+        api_client.post('/store/collections/',title='a') it will throw the error.
+        Collection.objects.create(title='a') this will create the mess
+
+        we can also create the relationships as:
+        collection = bake.make(Collection)
+        baker.make(Product,collection=collection,_quantity=10)
+        '''
+
+        '''
+        we can also write last two assert statments.
+        assert response.data == {
+            'id':collection.id,
+            'title':collection.title,
+            'product_count':0
+        }
+        '''
