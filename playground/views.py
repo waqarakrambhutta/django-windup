@@ -12,3 +12,7 @@ class HelloView(APIView):
         data = response.json()
         return render(request, 'hello.html', {'name': 'waqar'})
 
+
+
+
+
