@@ -11,8 +11,3 @@ class HelloView(APIView):
         response = requests.get('http://httpbin.org/delay/2')
         data = response.json()
         return render(request, 'hello.html', {'name': 'waqar'})
-
-
-
-
-
