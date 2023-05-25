@@ -1,1 +1,3 @@
 *.pyc
+/Media/
+/static/
