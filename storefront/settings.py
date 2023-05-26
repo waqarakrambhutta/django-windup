@@ -54,8 +54,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -214,6 +215,32 @@ CACHES = {
         "TIMEOUT": 10*60,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+LOGGING = {
+    'version':1,
+    'disable_existing_loggers': False,                  #because many logger work in django when we install libraries.
+    'handlers':{
+        'console':{                                     #with the help of this class we can write messages to the console.
+            'class':'logging.StreamHandler'             #logging is the python module from which we import StreamHandler.
+        },
+        'file':{
+            'class':'logging.FileHandler',
+            'filename':'general.log'
+        }
+    },
+    'loggers':{
+        '':{                                            #empty string means logger will log our whole project, we can specify it also e.g:'playground.views' or simply playground as 'playground'.
+            'handlers':['console','file'],              #this means what we do with the log? we store it in the console and file written above.
+            'level':os.environ.get('DJANGO_LOG_LEVEL','INFO')
+        }
+    },
+    'formatters':{
+        'verbose':{
+            'format':'{asctime} ({levelname}) - {name} - {message}',# we can find more detail from the logrecord class attributes form the python documentation.
+            'style' :'{'                                #if we set it to '{' it means that above format will pass form str.format(), if we set to '$' then it'll set to string.Template class.
         }
     }
 }
