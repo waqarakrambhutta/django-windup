@@ -228,7 +228,8 @@ LOGGING = {
         },
         'file':{
             'class':'logging.FileHandler',
-            'filename':'general.log'
+            'filename':'general.log',
+            'formatter':'verbose'                      #due to this we have different formatters for different handlers.
         }
     },
     'loggers':{
