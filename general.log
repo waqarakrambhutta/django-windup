@@ -9,3 +9,15 @@ Cannot execute silk_profile as silk is not installed correctly.
 2023-05-26 11:06:58,692 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2023-05-26 11:06:58,912 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
 2023-05-26 11:07:40,377 (WARNING) - django.request - Not Found: /favicon.ico
+2023-05-31 17:46:30,573 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 17:46:30,748 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2023-05-31 17:46:36,197 (WARNING) - django.request - Not Found: /favicon.ico
+2023-05-31 17:53:17,561 (WARNING) - django.request - Unauthorized: /store/collections/
+2023-05-31 17:53:17,577 (WARNING) - django.request - Forbidden: /store/collections/
+2023-05-31 17:53:17,585 (WARNING) - django.request - Bad Request: /store/collections/
+2023-05-31 17:53:29,224 (INFO) - django.utils.autoreload - /home/waqar/codewithmosh/django-windup/storefront3/storefront/settings/common.py changed, reloading.
+2023-05-31 17:53:30,130 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-05-31 17:53:30,313 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2023-05-31 17:53:49,672 (WARNING) - django.request - Unauthorized: /store/collections/
+2023-05-31 17:53:49,712 (WARNING) - django.request - Forbidden: /store/collections/
+2023-05-31 17:53:49,750 (WARNING) - django.request - Bad Request: /store/collections/
