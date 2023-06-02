@@ -17,4 +17,4 @@ class HelloView(APIView):
 
         except requests.ConnectionError:
             logger.critical('Logger is offline.')
-        return render(request, 'hello.html', {'name': 'waqar'})
+        return render(request, 'hello.html', {'name': 'Waqar'})

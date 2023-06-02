@@ -23,3 +23,111 @@ Cannot execute silk_profile as silk is not installed correctly.
 2023-05-31 17:53:49,750 (WARNING) - django.request - Bad Request: /store/collections/
 2023-06-01 11:58:39,205 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2023-06-01 11:58:39,691 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2023-06-01 13:36:11,261 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2023-06-01 13:36:11,824 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-01 13:36:16,675 (INFO) - playground.views - Calling httpbin
+2023-06-01 13:36:27,531 (INFO) - playground.views - Received the response 
+2023-06-01 13:36:27,613 (ERROR) - django.request - Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/codewithmosh/django-windup/storefront3/playground/views.py", line 16, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-06-02 16:39:28,981 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2023-06-02 16:39:29,547 (WARNING) - django.request - Not Found: /favicon.ico
+2023-06-02 16:40:28,494 (INFO) - playground.views - Calling httpbin
+2023-06-02 16:40:45,650 (INFO) - playground.views - Received the response 
+2023-06-02 16:40:45,750 (ERROR) - django.request - Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/waqar/codewithmosh/django-windup/storefront3/playground/views.py", line 16, in get
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "/home/waqar/.local/share/virtualenvs/storefront3-O14X7Guq/lib/python3.11/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-06-02 16:42:34,447 (INFO) - playground.views - Calling httpbin
+2023-06-02 16:42:47,641 (INFO) - playground.views - Received the response 
+2023-06-02 16:43:06,512 (INFO) - playground.views - Calling httpbin
+2023-06-02 16:43:18,558 (INFO) - playground.views - Received the response 
+2023-06-02 16:43:33,644 (INFO) - playground.views - Calling httpbin
+2023-06-02 16:44:05,275 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2023-06-02 16:44:05,301 (INFO) - playground.views - Calling httpbin
+2023-06-02 16:44:11,949 (INFO) - playground.views - Received the response 
