@@ -32,9 +32,13 @@ CACHES = {
 
 CELERY_BROKER_URL = 'redis://localhost:6379/1'
 
-EMAIL_HOST = os.environ['MAILGUN_SMTP_SERVER']
-EMAIL_HOST_USER = os.environ['MAILGUN_SMTP_LOGIN']
-EMAIL_HOST_PASSWORD = os.environ['MAILGUN_SMTP_PASSWORD']
-EMAIL_PORT = os.environ['MAILGUN_SMTP_PORT']
+
+
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = '' # due to fake SMTP the host user is empty.
+EMAIL_HOST_PASSWORD = '' # similarly password is also empty.
+EMAIL_PORT = 2525 # by default it used 25, due to fake SMTP we use 2525
+DEFAULT_FROM_EMAIL = 'waqar@domian.com'
+# we use the password in the envionment variable due to security problem. which we'll learn in production.
 
 

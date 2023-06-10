@@ -161,7 +161,6 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1)
 }
 
-
 ADMINS = [
     ('waqar','waqar@domain.com')
 ]
