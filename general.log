@@ -131,3 +131,6 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2023-06-02 16:44:05,275 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
 2023-06-02 16:44:05,301 (INFO) - playground.views - Calling httpbin
 2023-06-02 16:44:11,949 (INFO) - playground.views - Received the response 
+2023-06-11 11:01:11,325 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-11 11:01:11,504 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2023-06-11 11:01:20,083 (WARNING) - django.request - Not Found: /favicon.ico
