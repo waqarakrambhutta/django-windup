@@ -10,7 +10,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 ALLOWED_HOSTS = ['storefrontapp-68a745ebc45c.herokuapp.com']
 
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600,ssl_require=True) 
+    'default': dj_database_url.config(conn_max_age=600) 
 }
 
 REDIS_URL = os.environ['REDIS_URL']
