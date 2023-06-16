@@ -141,3 +141,5 @@ requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2023-06-16 10:04:01,394 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
 2023-06-16 10:42:05,030 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2023-06-16 10:42:05,312 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2023-06-16 11:00:47,585 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2023-06-16 11:00:47,786 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
