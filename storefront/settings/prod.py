@@ -7,7 +7,7 @@ DEBUG = False # If debug is off them we need to add the setting allowed hosts be
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['storefrontapp-68a745ebc45c.herokuapp.com']
 
 DATABASES = {
     'default': dj_database_url.config() 
