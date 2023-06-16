@@ -177,6 +177,7 @@ CELERY_BEAT_SCHEDULE = {
 }
 
 
+
 LOGGING = {
     'version':1,
     'disable_existing_loggers': False,                  #because many logger work in django when we install libraries.
